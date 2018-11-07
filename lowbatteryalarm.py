@@ -43,11 +43,13 @@ while True:
         if not p.is_playing():
             p.stop()
         status = p.play()
+        # is_playing() seems to return 0 if called just after play()
+        # so sleep 0.2 seconds
+        time.sleep(.2)
         if status != 0:
             syslog.syslog(syslog.LOG_ERR, 'vlc cannot play')
     else:
         p.stop()
-    time.sleep(.2)
     if p.is_playing() == 1:
         sleep_seconds = conf['alarmed_interval']
     time.sleep(sleep_seconds)

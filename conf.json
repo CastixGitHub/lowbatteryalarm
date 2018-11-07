@@ -1,5 +1,5 @@
 {
-    "thereshold" : 39,
+    "thereshold" : 20,
     "acpi_path" : "/sys/class/power_supply/BAT0/",
     "energy_now_file" : "energy_now",
     "energy_full_file" : "energy_full",
