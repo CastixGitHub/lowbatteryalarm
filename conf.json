@@ -1,10 +1,11 @@
 {
-    "thereshold" : 20,
+    "thereshold" : 25,
     "acpi_path" : "/sys/class/power_supply/BAT0/",
     "energy_now_file" : "energy_now",
     "energy_full_file" : "energy_full",
     "energy_status_file" : "status",
     "song_uri" : "file:///home/castix/lowbatteryalarm/song.ogg",
     "normal_interval" : 60,
-    "alarmed_interval" : 5
+    "alarmed_interval" : 5,
+    "postpone_minutes": 5
 }

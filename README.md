@@ -94,3 +94,15 @@ here an explaination of all the confirurable fields:
 - **normal_interval** integer, interval to poll the battery when the song is not playing, 60 is a reasonable choise
 
 - **alarmed_interval** integer, interval to poll the battery when the song is playing, 5 is a reasonable choise
+
+- **postpone_minutes** integer, postpone the alarm by that minutes
+
+## POSTPONE
+
+from the directory where this script is, launch the ``postpone.sh`` executable or ``python lowbatteryalarm.py --postpone`` and after **alarmed_interval** seconds it will stop playing for **postpone_minutes** minutes, then if it's still discarging it will play again
+
+if you're using i3wm then add the following line to your config file (~/.config/i3/config) so you can postpone it easly
+
+```bash
+bindsym $mod+p exec /home/castix/lowbatteryalarm/postpone.sh
+```
